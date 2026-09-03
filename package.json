@@ -1,0 +1,17 @@
+{
+  "name": "student-complaint-management-system",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "install:all": "npm install --workspaces",
+    "frontend": "npm run dev --workspace frontend",
+    "backend": "npm run dev --workspace backend",
+    "client": "npm run frontend",
+    "server": "npm run backend",
+    "build": "npm run build --workspace frontend"
+  }
+}
