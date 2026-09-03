@@ -34,3 +34,18 @@ To promote an existing registered user to administrator, run `cd backend && npm 
 To create the default local administrator, run `cd backend && npm run seed-admin`. It creates `admin@studentcare.local` with password `Admin@12345`; set `ADMIN_EMAIL`, `ADMIN_PASSWORD`, `ADMIN_NAME`, and `ADMIN_STUDENT_ID` in `backend/.env` before running it to use different credentials.
 
 The API runs on port `5001` by default and exposes protected student complaint and admin management endpoints, including `GET /api/admin/dashboard`, `GET /api/admin/complaints`, and the status/response PATCH endpoints.
+
+## Deploy
+
+Production URLs:
+
+- Frontend: https://hack-frontend-d3kjjm935-czonelanka-9521.vercel.app
+- Backend: https://hack-b1n4.onrender.com
+- Health check: https://hack-b1n4.onrender.com/api/health
+
+Set these deployment environment variables before redeploying:
+
+- Vercel: `VITE_API_URL=https://hack-b1n4.onrender.com/api`
+- Render: `CLIENT_URL=https://hack-frontend-d3kjjm935-czonelanka-9521.vercel.app`
+
+Do not add a trailing slash to either value. Vite environment changes require a new frontend deployment, and backend CORS changes require a new Render deployment.

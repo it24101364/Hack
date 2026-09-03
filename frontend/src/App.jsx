@@ -2,7 +2,7 @@ import { startTransition, useEffect, useRef, useState } from "react";
 import axios from "axios";
 import "./App.css";
 
-const API_URL = import.meta.env.VITE_API_URL || "https://hack-b1n4.onrender.com";
+const API_URL = (import.meta.env.VITE_API_URL || "https://hack-b1n4.onrender.com/api").replace(/\/$/, "");
 
 const emptyForm = {
   fullName: "",
