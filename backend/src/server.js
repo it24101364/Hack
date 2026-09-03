@@ -10,7 +10,7 @@ import adminRoutes from './routes/admin.js'
 const app = express()
 const port = process.env.PORT || 5001
 
-app.use(cors({ origin: process.env.CLIENT_URL || 'http://localhost:5173' }))
+app.use(cors({ origin: process.env.CLIENT_URL || 'https://hack-frontend-d3kjjm935-czonelanka-9521.vercel.app/' }))
 app.use(express.json())
 app.get('/api/health', (req, res) => res.json({ status: 'ok' }))
 app.use('/api/auth', authRoutes)
